@@ -16,9 +16,6 @@ import { CalculatorProvider } from '../../providers/calculator/calculator';
 })
 export class DryFertilizerStartPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public calculatorModule: CalculatorProvider) {
-    if (!this.calculatorModule.dryFertilizerStartUnits) {
-      this.calculatorModule.dryFertilizerStartUnits = this.calculatorModule.LbPerAcre.toString();
-    }
   }
 
   ionViewDidLoad() {

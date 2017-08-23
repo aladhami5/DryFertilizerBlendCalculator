@@ -10,8 +10,8 @@ import 'rxjs/add/operator/map';*/
 */
 @Injectable()
 export class CalculatorProvider {
-  LbPerAcre= "lb/acre"
-  KgPerHa= "kg/ha"
+  LbPerAcre = "lb/acre"
+  KgPerHa = "kg/ha"
   dryFertilizerStartUnits: string
 
   dryFertilizerStartNReading: number
@@ -22,10 +22,28 @@ export class CalculatorProvider {
   dryFertilizerStartKTarget: number
   dryFertilizerStartPTarget: number
   dryFertilizerStartSTarget: number
-  dryFertilizerDesiredFertilityLevels:string
+  dryFertilizerDesiredFertilityLevels: string
 
   c5: number
+  c40 = 1
+  c41 = 2
+  d40 = "34-0-0"
+  d41 = "46-0-0"
+  e10: number
+  c29 = 1
+  c30 = 2
+  c31 = 3
+  d29 = "11-52-0"
+  d30 = "12-51-0"
+  d31 = "18-46-0"
+  e12: number
+
   /*constructor(public http: Http) {*/
   constructor() {
-  }  
+    if (!this.dryFertilizerStartUnits) {
+      this.dryFertilizerStartUnits = this.KgPerHa.toString();
+      this.e10 = this.c41;
+      this.e12 = this.c29;
+    }
+  }
 }

@@ -25,5 +25,20 @@
         <ion-label>Number of acres</ion-label>
         <ion-input [(ngModel)]="calculatorModule.c5" type="number" placeholder = "0"></ion-input>
       </ion-item>
+      <ion-item>
+          <ion-label>Nitrogen Source</ion-label>
+          <ion-select [(ngModel)]="calculatorModule.e10">
+            <ion-option value="{{calculatorModule.c41}}">{{calculatorModule.d41}}</ion-option>
+            <ion-option value="{{calculatorModule.c40}}">{{calculatorModule.d40}}</ion-option>
+          </ion-select>
+        </ion-item>
+      <ion-item>
+          <ion-label>Phosphorus Source</ion-label>
+          <ion-select [(ngModel)]="calculatorModule.e12">
+            <ion-option value="{{calculatorModule.c29}}">{{calculatorModule.d29}}</ion-option>
+            <ion-option value="{{calculatorModule.c30}}">{{calculatorModule.d30}}</ion-option>
+            <ion-option value="{{calculatorModule.c31}}">{{calculatorModule.d31}}</ion-option>
+          </ion-select>
+        </ion-item>
   </ion-list>
 </ion-content>
