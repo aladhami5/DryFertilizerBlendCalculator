@@ -1,0 +1,29 @@
+<!--
+  Generated template for the FertilizerProductsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fertilizer Products</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Desired Fertility Levels {{calculatorModule.dryFertilizerStartUnits}} :</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>Number of acres</ion-label>
+        <ion-input [(ngModel)]="calculatorModule.c5" type="number" placeholder = "0"></ion-input>
+      </ion-item>
+  </ion-list>
+</ion-content>
