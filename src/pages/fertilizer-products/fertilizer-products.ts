@@ -20,7 +20,10 @@ export class FertilizerProductsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FertilizerProductsPage');
+  }
+
+  OpenPage(pageName: string) {
+    this.navCtrl.push(pageName)
   }
 
 }

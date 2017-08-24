@@ -15,30 +15,48 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item>
+    <ion-item no-lines>
       <ion-label>Desired Fertility Levels {{calculatorModule.dryFertilizerStartUnits}} :</ion-label>
     </ion-item>
     <ion-item>
       <ion-label>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-label>
     </ion-item>
     <ion-item>
-        <ion-label>Number of acres</ion-label>
-        <ion-input [(ngModel)]="calculatorModule.c5" type="number" placeholder = "0"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label>Nitrogen Source</ion-label>
-          <ion-select [(ngModel)]="calculatorModule.e10">
-            <ion-option value="{{calculatorModule.c41}}">{{calculatorModule.d41}}</ion-option>
-            <ion-option value="{{calculatorModule.c40}}">{{calculatorModule.d40}}</ion-option>
-          </ion-select>
-        </ion-item>
-      <ion-item>
-          <ion-label>Phosphorus Source</ion-label>
-          <ion-select [(ngModel)]="calculatorModule.e12">
-            <ion-option value="{{calculatorModule.c29}}">{{calculatorModule.d29}}</ion-option>
-            <ion-option value="{{calculatorModule.c30}}">{{calculatorModule.d30}}</ion-option>
-            <ion-option value="{{calculatorModule.c31}}">{{calculatorModule.d31}}</ion-option>
-          </ion-select>
-        </ion-item>
+      <ion-label>Number of acres</ion-label>
+      <ion-input [(ngModel)]="calculatorModule.c5" type="number" placeholder="0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nitrogen Source</ion-label>
+      <ion-select [(ngModel)]="calculatorModule.e10">
+        <ion-option value="{{calculatorModule.c41}}">{{calculatorModule.d41}}</ion-option>
+        <ion-option value="{{calculatorModule.c40}}">{{calculatorModule.d40}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phosphorus Source</ion-label>
+      <ion-select [(ngModel)]="calculatorModule.e12">
+        <ion-option value="{{calculatorModule.c29}}">{{calculatorModule.d29}}</ion-option>
+        <ion-option value="{{calculatorModule.c30}}">{{calculatorModule.d30}}</ion-option>
+        <ion-option value="{{calculatorModule.c31}}">{{calculatorModule.d31}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Potassium Source</ion-label>
+      <ion-select [(ngModel)]="calculatorModule.e16">
+        <ion-option value="{{calculatorModule.c43}}">{{calculatorModule.d43}}</ion-option>
+        <ion-option value="{{calculatorModule.c44}}">{{calculatorModule.d44}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-label>Sulphur Source</ion-label>
+      <ion-select [(ngModel)]="calculatorModule.e14">
+        <ion-option value="{{calculatorModule.c34}}">{{calculatorModule.d34}}</ion-option>
+        <ion-option value="{{calculatorModule.c35}}">{{calculatorModule.d35}}</ion-option>
+        <ion-option value="{{calculatorModule.c36}}">{{calculatorModule.d36}}</ion-option>
+        <ion-option value="{{calculatorModule.c37}}">{{calculatorModule.d37}}</ion-option>
+        <ion-option value="{{calculatorModule.c38}}">{{calculatorModule.d38}}</ion-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
+  <button ion-button (click)="OpenPage('FertilizerPricesPage')" block outline color="dark">Select Fertilizer Prices</button>
 </ion-content>
