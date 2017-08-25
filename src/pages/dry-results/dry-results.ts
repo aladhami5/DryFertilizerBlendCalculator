@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CalculatorProvider } from '../../providers/calculator/calculator';
 
 /**
- * Generated class for the FertilizerPricesPage page.
+ * Generated class for the DryResultsPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -11,19 +11,16 @@ import { CalculatorProvider } from '../../providers/calculator/calculator';
 
 @IonicPage()
 @Component({
-  selector: 'page-fertilizer-prices',
-  templateUrl: 'fertilizer-prices.html',
+  selector: 'page-dry-results',
+  templateUrl: 'dry-results.html',
 })
-export class FertilizerPricesPage {
+export class DryResultsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public calculatorModule: CalculatorProvider) {
   }
 
   ionViewDidLoad() {
-  }
-
-  OpenPage(pageName: string) {
-    this.navCtrl.push(pageName)
+    console.log('ionViewDidLoad DryResultsPage');
   }
 
 }

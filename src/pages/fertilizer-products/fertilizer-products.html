@@ -23,38 +23,38 @@
     </ion-item>
     <ion-item>
       <ion-label>Number of acres</ion-label>
-      <ion-input [(ngModel)]="calculatorModule.c5" type="number" placeholder="0"></ion-input>
+      <ion-input [(ngModel)]="calculatorModule.C5" type="number" placeholder="0"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Nitrogen Source</ion-label>
-      <ion-select [(ngModel)]="calculatorModule.e10">
-        <ion-option value="{{calculatorModule.c41}}">{{calculatorModule.d41}}</ion-option>
-        <ion-option value="{{calculatorModule.c40}}">{{calculatorModule.d40}}</ion-option>
+      <ion-select [(ngModel)]="calculatorModule.E10">
+        <ion-option value="{{calculatorModule.C41}}">{{calculatorModule.NDisplayNames[calculatorModule.C41]}}</ion-option>
+        <ion-option value="{{calculatorModule.C40}}">{{calculatorModule.NDisplayNames[calculatorModule.C40]}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Phosphorus Source</ion-label>
-      <ion-select [(ngModel)]="calculatorModule.e12">
-        <ion-option value="{{calculatorModule.c29}}">{{calculatorModule.d29}}</ion-option>
-        <ion-option value="{{calculatorModule.c30}}">{{calculatorModule.d30}}</ion-option>
-        <ion-option value="{{calculatorModule.c31}}">{{calculatorModule.d31}}</ion-option>
+      <ion-select [(ngModel)]="calculatorModule.E12">
+        <ion-option value="{{calculatorModule.C29}}">{{calculatorModule.PDisplayNames[calculatorModule.C29]}}</ion-option>
+        <ion-option value="{{calculatorModule.C30}}">{{calculatorModule.PDisplayNames[calculatorModule.C30]}}</ion-option>
+        <ion-option value="{{calculatorModule.C31}}">{{calculatorModule.PDisplayNames[calculatorModule.C31]}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Potassium Source</ion-label>
-      <ion-select [(ngModel)]="calculatorModule.e16">
-        <ion-option value="{{calculatorModule.c43}}">{{calculatorModule.d43}}</ion-option>
-        <ion-option value="{{calculatorModule.c44}}">{{calculatorModule.d44}}</ion-option>
+      <ion-select [(ngModel)]="calculatorModule.E16">
+        <ion-option value="{{calculatorModule.C43}}">{{calculatorModule.KDisplayNames[calculatorModule.C43]}}</ion-option>
+        <ion-option value="{{calculatorModule.C44}}">{{calculatorModule.KDisplayNames[calculatorModule.C44]}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item no-lines>
       <ion-label>Sulphur Source</ion-label>
-      <ion-select [(ngModel)]="calculatorModule.e14">
-        <ion-option value="{{calculatorModule.c34}}">{{calculatorModule.d34}}</ion-option>
-        <ion-option value="{{calculatorModule.c35}}">{{calculatorModule.d35}}</ion-option>
-        <ion-option value="{{calculatorModule.c36}}">{{calculatorModule.d36}}</ion-option>
-        <ion-option value="{{calculatorModule.c37}}">{{calculatorModule.d37}}</ion-option>
-        <ion-option value="{{calculatorModule.c38}}">{{calculatorModule.d38}}</ion-option>
+      <ion-select [(ngModel)]="calculatorModule.E14">
+        <ion-option value="{{calculatorModule.C34}}">{{calculatorModule.SDisplayNames[calculatorModule.C34]}}</ion-option>
+        <ion-option value="{{calculatorModule.C35}}">{{calculatorModule.SDisplayNames[calculatorModule.C35]}}</ion-option>
+        <ion-option value="{{calculatorModule.C36}}">{{calculatorModule.SDisplayNames[calculatorModule.C36]}}</ion-option>
+        <ion-option value="{{calculatorModule.C37}}">{{calculatorModule.SDisplayNames[calculatorModule.C37]}}</ion-option>
+        <ion-option value="{{calculatorModule.C38}}">{{calculatorModule.SDisplayNames[calculatorModule.C38]}}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
