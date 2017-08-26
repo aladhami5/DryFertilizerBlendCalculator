@@ -20,7 +20,10 @@ export class DryResultsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DryResultsPage');
   }
 
+  round(decimal:number):number
+  {
+    return Number.parseFloat(decimal.toFixed(2));
+  }
 }

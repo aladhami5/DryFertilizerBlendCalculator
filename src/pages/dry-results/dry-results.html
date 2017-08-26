@@ -14,11 +14,36 @@
 
 
 <ion-content padding>
-    <ion-item-group>
-        <ion-item-divider color="light">N-P-K-S:</ion-item-divider>
-        <ion-item>Required {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
-        <ion-item>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-item>
-        <ion-item>Actual {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
-        <ion-item>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-item>
-      </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="light">N-P-K-S:</ion-item-divider>
+    <ion-item>Required {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
+    <ion-item>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-item>
+    <ion-item>Actual {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
+    <ion-item>{{calculatorModule.dryFertilizerActualFertilityLevels}}</ion-item>
+    <ion-item-divider color="light">Product Rates {{calculatorModule.dryFertilizerStartUnits}}</ion-item-divider>
+    <ion-item>
+      {{calculatorModule.NDisplayNames[calculatorModule.E10]}}
+      <ion-note item-end>
+        {{this.round(calculatorModule.H5)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.PDisplayNames[calculatorModule.E12]}}
+      <ion-note item-end>
+          {{this.round(calculatorModule.I5)}}
+        </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.KDisplayNames[calculatorModule.E16]}}
+      <ion-note item-end>
+          {{this.round(calculatorModule.J5)}}
+        </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.SDisplayNames[calculatorModule.E14]}}
+      <ion-note item-end>
+          {{this.round(calculatorModule.K5)}}
+        </ion-note>
+    </ion-item>
+  </ion-item-group>
 </ion-content>

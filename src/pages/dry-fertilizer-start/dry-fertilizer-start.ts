@@ -22,37 +22,11 @@ export class DryFertilizerStartPage {
 
   }
   updateCalculator() {
-    let readings = [
-      this.calculatorModule.dryFertilizerStartNReading,
-      this.calculatorModule.dryFertilizerStartPReading,
-      this.calculatorModule.dryFertilizerStartKReading,
-      this.calculatorModule.dryFertilizerStartSReading
-    ]
-    let targets = [
-      this.calculatorModule.dryFertilizerStartNTarget,
-      this.calculatorModule.dryFertilizerStartPTarget,
-      this.calculatorModule.dryFertilizerStartKTarget,
-      this.calculatorModule.dryFertilizerStartSTarget
-    ]
-    this.calculatorModule.dryFertilizerDesiredFertilityLevels = ""
-    for (let i = 0; i < readings.length; i++) {
-      let reading = readings[i];
-      let target = targets[i];
-      if (!reading) {
-        reading = 0
-      }
-      if (!target) {
-        target = 0
-      }
-      let desired = target - reading;
-      if (desired < 0) {
-        desired = 0
-      }
-      this.calculatorModule.dryFertilizerDesiredFertilityLevels += desired
-      if (i < (readings.length - 1)) {
-        this.calculatorModule.dryFertilizerDesiredFertilityLevels += "-"
-      }
-    }
+    this.calculatorModule.D5 = this.calculatorModule.dryFertilizerStartNTarget - this.calculatorModule.dryFertilizerStartNReading;
+    this.calculatorModule.E5 = this.calculatorModule.dryFertilizerStartPTarget - this.calculatorModule.dryFertilizerStartPReading;
+    this.calculatorModule.F5 = this.calculatorModule.dryFertilizerStartKTarget - this.calculatorModule.dryFertilizerStartKReading;
+    this.calculatorModule.G5 = this.calculatorModule.dryFertilizerStartSTarget - this.calculatorModule.dryFertilizerStartSReading;
+    this.calculatorModule.dryFertilizerDesiredFertilityLevels = this.calculatorModule.D5 + "-" + this.calculatorModule.E5 + "-" + this.calculatorModule.F5 + "-" + this.calculatorModule.G5
     this.navCtrl.push('FertilizerProductsPage')
   }
 }
