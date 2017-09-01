@@ -22,8 +22,8 @@ export class DryResultsPage {
   ionViewDidLoad() {
   }
 
-  round(decimal:number):number
+  round(decimal:number, accuracy:number):number
   {
-    return Number.parseFloat(decimal.toFixed(2));
+    return Number.parseFloat(decimal.toFixed(accuracy));
   }
 }

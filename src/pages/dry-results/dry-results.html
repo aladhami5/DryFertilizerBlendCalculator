@@ -8,14 +8,18 @@
 
   <ion-navbar>
     <ion-title>Results</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navCtrl.goToRoot()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
   <ion-item-group>
-    <ion-item-divider color="light">N-P-K-S:</ion-item-divider>
+    <ion-item-divider color="light">N - P - K - S:</ion-item-divider>
     <ion-item>Required {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
     <ion-item>{{calculatorModule.dryFertilizerDesiredFertilityLevels}}</ion-item>
     <ion-item>Actual {{calculatorModule.dryFertilizerStartUnits}}:</ion-item>
@@ -24,26 +28,94 @@
     <ion-item>
       {{calculatorModule.NDisplayNames[calculatorModule.E10]}}
       <ion-note item-end>
-        {{this.round(calculatorModule.H5)}}
+        {{this.round(calculatorModule.H5,2)}}
       </ion-note>
     </ion-item>
     <ion-item>
       {{calculatorModule.PDisplayNames[calculatorModule.E12]}}
       <ion-note item-end>
-          {{this.round(calculatorModule.I5)}}
-        </ion-note>
+        {{this.round(calculatorModule.I5,2)}}
+      </ion-note>
     </ion-item>
     <ion-item>
       {{calculatorModule.KDisplayNames[calculatorModule.E16]}}
       <ion-note item-end>
-          {{this.round(calculatorModule.J5)}}
-        </ion-note>
+        {{this.round(calculatorModule.J5,2)}}
+      </ion-note>
     </ion-item>
     <ion-item>
       {{calculatorModule.SDisplayNames[calculatorModule.E14]}}
       <ion-note item-end>
-          {{this.round(calculatorModule.K5)}}
-        </ion-note>
+        {{this.round(calculatorModule.K5,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Blend rate:
+      <ion-note item-end>
+        {{this.round(calculatorModule.L5,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item-divider color="light">Product Amounts (Tonnes)</ion-item-divider>
+    <ion-item>
+      {{calculatorModule.NDisplayNames[calculatorModule.E10]}}
+      <ion-note item-end>
+        {{this.round(calculatorModule.H6,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.PDisplayNames[calculatorModule.E12]}}
+      <ion-note item-end>
+        {{this.round(calculatorModule.I6,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.KDisplayNames[calculatorModule.E16]}}
+      <ion-note item-end>
+        {{this.round(calculatorModule.J6,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      {{calculatorModule.SDisplayNames[calculatorModule.E14]}}
+      <ion-note item-end>
+        {{this.round(calculatorModule.K6,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item-divider color="light">Blend Details</ion-item-divider>
+    <ion-item>
+      Blend analysis:
+      <ion-note item-end>
+        {{this.calculatorModule.L15}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Total blend (tonnes):
+      <ion-note item-end>
+        {{this.round(calculatorModule.M5,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Total blend cost:
+      <ion-note item-end>
+        ${{this.round(calculatorModule.L11,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Blend cost ($/tonne):
+      <ion-note item-end>
+        ${{this.round(calculatorModule.L12,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Blend cost ($/acre):
+      <ion-note item-end>
+        ${{this.round(calculatorModule.L13,2)}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Blend cost ($/ha):
+      <ion-note item-end>
+        ${{this.round(calculatorModule.L14,2)}}
+      </ion-note>
     </ion-item>
   </ion-item-group>
 </ion-content>

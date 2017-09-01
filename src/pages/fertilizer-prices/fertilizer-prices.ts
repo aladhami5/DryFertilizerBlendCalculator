@@ -47,34 +47,47 @@ export class FertilizerPricesPage {
     let K37 = KS[this.calculatorModule.E16];
     this.calculatorModule.J5 = F5 / K37;//required
 
-    let L5 = this.calculatorModule.H5 + this.calculatorModule.I5 + this.calculatorModule.J5 + this.calculatorModule.K5;//total blend
-    let H6 = 0;
-    let I6 = 0;
-    let J6 = 0;
-    let K6 = 0;
-    let L6 = 0;
-    let M5 = 0;
+    this.calculatorModule.L5 = this.calculatorModule.H5 + this.calculatorModule.I5 + this.calculatorModule.J5 + this.calculatorModule.K5;//total blend
     if (this.calculatorModule.dryFertilizerStartUnits == this.calculatorModule.LbPerAcre) {
-      H6 = this.calculatorModule.H5 * this.calculatorModule.C5 / 2205;
-      I6 = this.calculatorModule.I5 * this.calculatorModule.C5 / 2205;
-      J6 = this.calculatorModule.J5 * this.calculatorModule.C5 / 2205;
-      K6 = this.calculatorModule.K5 * this.calculatorModule.C5 / 2205;
-      L6 = L5 * this.calculatorModule.C5 / 2205;
-      M5 = L5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.H6 = this.calculatorModule.H5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.I6 = this.calculatorModule.I5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.J6 = this.calculatorModule.J5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.K6 = this.calculatorModule.K5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.L6 = this.calculatorModule.L5 * this.calculatorModule.C5 / 2205;
+      this.calculatorModule.M5 = this.calculatorModule.L5 * this.calculatorModule.C5 / 2205;
     } else {
-      H6 = this.calculatorModule.H5 * (this.calculatorModule.C5 / 2.47) / 1000;
-      I6 = this.calculatorModule.I5 * (this.calculatorModule.C5 / 2.47) / 1000;
-      J6 = this.calculatorModule.J5 * (this.calculatorModule.C5 / 2.47) / 1000;
-      K6 = this.calculatorModule.K5 * (this.calculatorModule.C5 / 2.47) / 1000;
-      L6 = L5 * (this.calculatorModule.C5 / 2.47) / 1000;
-      M5 = L5 / 2.47 * this.calculatorModule.C5 / 1000;
+      this.calculatorModule.H6 = this.calculatorModule.H5 * (this.calculatorModule.C5 / 2.47) / 1000;
+      this.calculatorModule.I6 = this.calculatorModule.I5 * (this.calculatorModule.C5 / 2.47) / 1000;
+      this.calculatorModule.J6 = this.calculatorModule.J5 * (this.calculatorModule.C5 / 2.47) / 1000;
+      this.calculatorModule.K6 = this.calculatorModule.K5 * (this.calculatorModule.C5 / 2.47) / 1000;
+      this.calculatorModule.L6 = this.calculatorModule.L5 * (this.calculatorModule.C5 / 2.47) / 1000;
+      this.calculatorModule.M5 = this.calculatorModule.L5 / 2.47 * this.calculatorModule.C5 / 1000;
     }
     //Actual
     let D8 = (this.calculatorModule.H5 * I37) + (this.calculatorModule.I5 * J39) + (this.calculatorModule.K5 * J40);
     let E8 = (this.calculatorModule.I5 * J37) + (this.calculatorModule.K5 * J41);
     let F8 = this.calculatorModule.J5 * K37;
     let G8 = this.calculatorModule.K5 * L37;
-    this.calculatorModule.dryFertilizerActualFertilityLevels = this.calculatorModule.D5.toString() + "-" + E8.toString() + "-" + F8.toString() + "-" + G8.toString();
+    this.calculatorModule.dryFertilizerActualFertilityLevels = D8.toString() + " - " + E8.toString() + " - " + F8.toString() + " - " + G8.toString();
+
+    let M31 = this.round(this.calculatorModule.L5 != 0 ? D8 / this.calculatorModule.L5 * 100 : 0, 1);
+    let N31 = this.round(this.calculatorModule.L5 != 0 ? E8 / this.calculatorModule.L5 * 100 : 0, 1);
+    let O31 = this.round(this.calculatorModule.L5 != 0 ? F8 / this.calculatorModule.L5 * 100 : 0, 1);
+    let P31 = this.round(this.calculatorModule.L5 != 0 ? G8 / this.calculatorModule.L5 * 100 : 0, 1);
+    this.calculatorModule.L15 = M31.toString() + " - " + N31.toString() + " - " + O31.toString() + " - " + P31.toString();
+
+    this.calculatorModule.L12 = this.calculatorModule.L5 != 0 ? (this.calculatorModule.K5 / this.calculatorModule.L5 * this.calculatorModule.L8) + (this.calculatorModule.I5 / this.calculatorModule.L5 * this.calculatorModule.J8) + (this.calculatorModule.J5 / this.calculatorModule.L5 * this.calculatorModule.K8) + (this.calculatorModule.H5 / this.calculatorModule.L5 * this.calculatorModule.I8) : 0;
+    this.calculatorModule.L11 = this.calculatorModule.L12 * this.calculatorModule.M5
+    if (this.calculatorModule.dryFertilizerStartUnits == this.calculatorModule.LbPerAcre) {
+      this.calculatorModule.L13 = this.calculatorModule.L12 / 2205 * this.calculatorModule.L5;
+    } else {
+      this.calculatorModule.L13 = this.calculatorModule.L11 / this.calculatorModule.C5;
+    }
+    this.calculatorModule.L14 = this.calculatorModule.L13 * 2.47;
+  }
+
+  round(decimal: number, accuracy: number): number {
+    return Number.parseFloat(decimal.toFixed(accuracy));
   }
 
   OpenPage(pageName: string) {

@@ -26,7 +26,7 @@ export class DryFertilizerStartPage {
     this.calculatorModule.E5 = this.calculatorModule.dryFertilizerStartPTarget - this.calculatorModule.dryFertilizerStartPReading;
     this.calculatorModule.F5 = this.calculatorModule.dryFertilizerStartKTarget - this.calculatorModule.dryFertilizerStartKReading;
     this.calculatorModule.G5 = this.calculatorModule.dryFertilizerStartSTarget - this.calculatorModule.dryFertilizerStartSReading;
-    this.calculatorModule.dryFertilizerDesiredFertilityLevels = this.calculatorModule.D5 + "-" + this.calculatorModule.E5 + "-" + this.calculatorModule.F5 + "-" + this.calculatorModule.G5
+    this.calculatorModule.dryFertilizerDesiredFertilityLevels = this.calculatorModule.D5 + " - " + this.calculatorModule.E5 + " - " + this.calculatorModule.F5 + " - " + this.calculatorModule.G5
     this.navCtrl.push('FertilizerProductsPage')
   }
 }

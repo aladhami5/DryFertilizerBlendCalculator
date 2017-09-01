@@ -57,6 +57,18 @@ export class CalculatorProvider {
   I5: number
   H5: number
   J5: number
+  L5: number
+  K6: number
+  I6: number
+  H6: number
+  J6: number
+  L6: number
+  L15: string
+  M5: number
+  L11: number
+  L12: number
+  L13: number
+  L14: number
 
   dryFertilizerActualFertilityLevels: string
 
@@ -73,6 +85,10 @@ export class CalculatorProvider {
       this.dryFertilizerStartPTarget = 40;
       this.dryFertilizerStartSTarget = 10;
       this.C5 = 310;
+      this.I8 = 300;
+      this.J8 = 400;
+      this.K8 = 500;
+      this.L8 = 600;
       this.E10 = this.C41;
       this.E12 = this.C30;
       this.E16 = this.C43;
